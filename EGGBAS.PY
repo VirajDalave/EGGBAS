@@ -10,7 +10,7 @@ EWIDTH,EHEIGHT = 30,38
 CWIDTH,CHEIGHT = 88,125
 FPS = 60
 BTVEL = 18
-EVEL = 9
+EVEL = 8
 EGG_CATCH = pygame.USEREVENT+1
 EGG_DROP = pygame.USEREVENT+2
 
@@ -76,7 +76,7 @@ def main():
     clock = pygame.time.Clock()
     eggs = []
     neweggsx = [36,1216,433,830]
-    neweggsy = 72
+    neweggsy = 10 + CHEIGHT//2
     new_egg = pygame.Rect(random.choice(neweggsx), 72, EWIDTH, EHEIGHT)
     lives = 3
     points = 0
