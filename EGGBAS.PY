@@ -14,6 +14,7 @@ BTVEL = 18
 EGG_CATCH = pygame.USEREVENT+1
 EGG_DROP = pygame.USEREVENT+2
 
+EGGBASS = pygame.display.set_caption("EGGBASS")
 ROD = pygame.Rect(0, (10+CHEIGHT-5), WIDTH,7)
 WIN = pygame.display.set_mode((WIDTH,HEIGHT))
 BG_IMG =pygame.transform.scale(pygame.image.load(os.path.join("EGGBAS Assets","Background.png")), (WIDTH,HEIGHT)) 
