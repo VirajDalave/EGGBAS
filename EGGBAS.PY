@@ -88,7 +88,8 @@ def main():
         clock.tick(FPS)
         for event  in pygame.event.get():
             if event.type == pygame.QUIT:
-                run = False    
+                run = False
+                pygame.quit()    
             if event.type == EGG_CATCH:
                 points+=10
             if event.type == EGG_DROP:
@@ -103,8 +104,10 @@ def main():
             EVEL = 8
         if points>=300 and points<400:
             EVEL = 9
-        if points>=400:
-            evel = 10
+        if points>=400 and points<500:
+            EVEL = 10
+        if points>=500:
+            EVEL = 12
 
         ending = " "
         if lives <=0:
@@ -116,7 +119,7 @@ def main():
         basketm(keys_pressed,basket) 
         catchdrop(basket, new_egg, eggs, EGG_CATCH, EGG_DROP,EVEL)        
         draw_window(basket,eggs,new_egg,lives,points)
-    pygame.quit()
+    main()
 
 
 if __name__ == "__main__":
